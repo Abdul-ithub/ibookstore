@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I Book Store</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <h1 class=" alert-danger text-center">iBookStore API's Documentation</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Api Title</th>
+                    <th>URL</th>
+                    <th>Method</th>
+                    <th>Request Format</th>
+                    <th>Request Parameter</th>
+                    <th>Response Data Sample</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Customer Registration</td>
+                    <td>{server}/store/customer_reg</td>
+                    <td>POST</td>
+                    <td>JSON</td>
+                    <td>name,address,phone,email,password</td>
+                    <td>Response code : 201<br>
+                        {
+                        "status": true,
+                        "msg": "Customer saved sucessfully!",
+                        "data": {
+                            "id": 1,
+                            "name": "abdul rehman khan",
+                            "address": "117 jawahar marg indore",
+                            "phone": "7869588763",
+                            "email": "arehman92123@gmail.com",
+                            "user": 2,
+                            "updatedAt": "2023-12-14T12:00:14.715Z",
+                            "createdAt": "2023-12-14T12:00:14.715Z"
+                        },
+                        "error": null
+                        }<br>
+                    Response code : 500<br>
+                    {
+                        "status": false,
+                        "msg": "Customer not saved!",
+                        "data": null,
+                        "error": [
+                            {
+                                "field": "email",
+                                "message": "email must be unique"
+                            }
+                        ]
+                    }
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
